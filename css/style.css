@@ -1,0 +1,241 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 0.9375rem;
+  font-family: "Poppins", sans-serif;
+  color: #464040;
+  line-height: 1.8;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+  font-family: "Lora", Arial, serif;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+  color: #0aa9ec;
+  outline: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  font-family: "Lora", Arial, serif;
+}
+
+header {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header form {
+  width: 50%;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+}
+.search input {
+  background: #fff !important;
+  border: 1px solid #7cd1f5 !important;
+  color: black;
+  font-size: 0.9375rem;
+  padding: 0.2rem;
+  line-height: 2;
+  outline: none;
+  border-color: green;
+  width: 100%;
+  border-radius: 5px;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+.search #icon-search {
+  position: absolute;
+  right: 10px;
+  top: 13px;
+  color: #7cd1f5;
+  cursor: pointer;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  padding-top: 50px;
+}
+
+.nav {
+  position: fixed;
+  height: calc(100vh - 60px);
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+.nav__author {
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  font-family: "Abril Fatface", cursive;
+  font-size: 4.625rem;
+  line-height: 0.8;
+  min-height: 5rem;
+  margin-bottom: 30px;
+}
+.nav__mail {
+  margin-bottom: 30px;
+}
+.nav__footer {
+  margin-bottom: 30px;
+}
+.nav ul {
+  padding-left: 0px;
+}
+.nav li {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.nav a {
+  color: rgba(0, 0, 0, 0.7);
+}
+.nav a:hover {
+  color: black;
+}
+.nav__input {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+.nav input {
+  background: #fff !important;
+  border: 1px solid #7cd1f5 !important;
+  color: black;
+  font-size: 0.9375rem;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  padding: 0.3rem;
+  width: 100%;
+  line-height: 2;
+  outline: none;
+}
+.nav #sendMail {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  cursor: pointer;
+}
+.nav label {
+  font-family: "Lora", Arial, serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+#center {
+  border-left: 1px solid #e6e6e67a;
+  border-right: 1px solid #e6e6e67a;
+}
+
+.post {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  align-items: center;
+  padding-left: 10px;
+}
+.post__title a {
+  font-family: "Lora", Arial, serif;
+  color: black;
+  font-weight: 400;
+  font-size: 1.875rem;
+}
+.post__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.post__content {
+  padding-left: 10px;
+  width: calc(100% - 150px);
+}
+.post__subtitle {
+  display: flex;
+  gap: 10px;
+}
+
+#right {
+  background-color: #e4e6e845 !important;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 5px;
+}
+
+.right__title h3 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+
+.article {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.article a {
+  width: 80px;
+  height: 80px;
+  display: block;
+  padding-right: 5px;
+  background-position: center;
+  background-size: cover;
+}
+.article__infor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 0.75rem;
+}
+.article__title {
+  padding-left: 10px;
+}
+.article__title h4 {
+  font-size: 0.9375rem;
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
