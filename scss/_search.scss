@@ -1,0 +1,27 @@
+.search{
+  width: 100%;
+  position: relative;
+
+  input{
+    background: #fff !important;
+    border: 1px solid #7cd1f5 !important;
+    color: black;
+    font-size: 0.9375rem;
+    padding: 0.2rem;
+    line-height: 2;
+    outline: none;
+    border-color: green;
+    width: 100%;
+    border-radius: 5px;
+    padding-right:30px;
+    padding-left: 10px;
+  }
+
+  #icon-search{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    color: #7cd1f5;
+    cursor: pointer;
+  }
+}

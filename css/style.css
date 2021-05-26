@@ -43,6 +43,27 @@ input {
   font-family: "Lora", Arial, serif;
 }
 
+#container {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  padding-top: 50px;
+}
+@media (max-width: 87.4375em) {
+  #container {
+    grid-template-columns: 75% 25%;
+  }
+}
+@media (max-width: 63.9375em) {
+  #container {
+    grid-template-columns: 100%;
+  }
+}
+
+#center {
+  border-left: 1px solid #e6e6e67a;
+  border-right: 1px solid #e6e6e67a;
+}
+
 header {
   height: 50px;
   width: 100%;
@@ -82,10 +103,10 @@ header form {
   cursor: pointer;
 }
 
-#container {
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
-  padding-top: 50px;
+@media (max-width: 87.4375em) {
+  #left {
+    display: none;
+  }
 }
 
 .nav {
@@ -95,7 +116,7 @@ header form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 10px;
+  padding-right: 30px;
   padding-left: 30px;
 }
 .nav__author {
@@ -166,82 +187,6 @@ header form {
   font-weight: 600;
 }
 
-#center {
-  border-left: 1px solid #e6e6e67a;
-  border-right: 1px solid #e6e6e67a;
-}
-
-.post {
-  display: flex;
-  width: 100%;
-  margin-bottom: 30px;
-  align-items: center;
-  padding-left: 10px;
-}
-.post__title a {
-  font-family: "Lora", Arial, serif;
-  color: black;
-  font-weight: 400;
-  font-size: 1.875rem;
-}
-.post__image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-}
-.post__content {
-  padding-left: 10px;
-  width: calc(100% - 150px);
-}
-.post__subtitle {
-  display: flex;
-  gap: 10px;
-}
-
-#right {
-  background-color: #e4e6e845 !important;
-  padding-top: 10px;
-  padding-left: 30px;
-  padding-right: 5px;
-}
-
-.right__title h3 {
-  font-weight: normal;
-  font-style: italic;
-  font-size: 1.125rem;
-  margin-bottom: 15px;
-}
-
-.article {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.article a {
-  width: 80px;
-  height: 80px;
-  display: block;
-  padding-right: 5px;
-  background-position: center;
-  background-size: cover;
-}
-.article__infor {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  font-size: 0.75rem;
-}
-.article__title {
-  padding-left: 10px;
-}
-.article__title h4 {
-  font-size: 0.9375rem;
-  font-weight: normal;
-}
-
 .menu--home {
   background: linear-gradient(45deg, #0aa9ec 50%, transparent 0) right/250% 100% no-repeat, linear-gradient(45deg, transparent 50%, #0aa9ec 0) left/250% 100% no-repeat;
   transition: 0.5s;
@@ -286,6 +231,106 @@ header form {
 .menu--author:hover {
   --d: 100%;
   --p: 0% ;
+}
+
+#right {
+  background-color: #e4e6e845 !important;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 5px;
+}
+@media (max-width: 63.9375em) {
+  #right {
+    display: none;
+  }
+}
+
+.right__title h3 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+
+.article {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.article a {
+  min-width: 80px;
+  height: 80px;
+  display: block;
+  padding-right: 5px;
+  background-position: center;
+  background-size: cover;
+}
+.article__infor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  font-size: 0.75rem;
+}
+.article__title {
+  padding-left: 10px;
+}
+.article__title h4 {
+  font-size: 0.9375rem;
+  font-weight: normal;
+}
+.article h4 a {
+  width: 100%;
+  height: unset;
+}
+
+.post {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (max-width: 63.9375em) {
+  .post {
+    flex-direction: column;
+  }
+}
+.post__title a {
+  font-family: "Lora", Arial, serif;
+  color: black;
+  font-weight: 400;
+  font-size: 1.875rem;
+}
+.post__title a:hover {
+  color: #0aa9ec;
+}
+.post__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 63.9375em) {
+  .post__image {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
+.post__content {
+  padding-left: 10px;
+  width: calc(100% - 150px);
+}
+@media (max-width: 63.9375em) {
+  .post__content {
+    width: 100%;
+  }
+}
+.post__subtitle {
+  display: flex;
+  gap: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

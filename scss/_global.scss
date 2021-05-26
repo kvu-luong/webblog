@@ -42,3 +42,20 @@ img {
 input{
   font-family: "Lora", Arial, serif;
 }
+
+
+#container{
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  padding-top: 50px;
+  @include breakpoint-down(large){
+    grid-template-columns: 75% 25%;
+  }
+  @include breakpoint-down(medium){
+    grid-template-columns: 100%;
+  }
+}
+#center{
+  border-left: 1px solid $border-color;
+  border-right: 1px solid $border-color;
+}

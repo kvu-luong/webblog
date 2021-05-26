@@ -1,0 +1,50 @@
+#right{
+  background-color: #e4e6e845 !important;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 5px;
+  @include breakpoint-down(medium){
+    display: none;
+  } 
+}
+.right{
+  &__title h3{
+    font-weight: normal;
+    font-style: italic;
+    font-size: $font-md;
+    margin-bottom: 15px;
+  }
+}
+
+.article{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 15px;
+  a{
+    min-width: 80px;
+    height: 80px;
+    display: block;
+    padding-right: 5px;
+    background-position: center;
+    background-size: cover;
+  }
+  &__infor{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-size: 0.75rem;
+  }
+  &__title{
+    padding-left: 10px;
+  }
+
+  &__title h4{
+    font-size: $font-sm;
+    font-weight: normal;
+  }
+  h4 a{
+    width: 100%;
+    height: unset;
+  }
+}
