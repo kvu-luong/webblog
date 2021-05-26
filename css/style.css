@@ -127,6 +127,10 @@ header form {
 }
 .nav a {
   color: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 .nav a:hover {
   color: black;
@@ -236,6 +240,52 @@ header form {
 .article__title h4 {
   font-size: 0.9375rem;
   font-weight: normal;
+}
+
+.menu--home {
+  background: linear-gradient(45deg, #0aa9ec 50%, transparent 0) right/250% 100% no-repeat, linear-gradient(45deg, transparent 50%, #0aa9ec 0) left/250% 100% no-repeat;
+  transition: 0.5s;
+}
+.menu--home:hover {
+  background-position: center;
+  color: #fff !important;
+  text-align: center;
+}
+.menu--php {
+  background: repeating-linear-gradient(#0aa9ec 0 8px, transparent 0 16px) left/var(--d, 0) 100% no-repeat, repeating-linear-gradient(transparent 0 8px, #0aa9ec 0 16px) right/var(--d, 0) 100% no-repeat;
+  transition: 0.5s;
+}
+.menu--php:hover {
+  --d: 100%;
+  color: #fff !important;
+  text-align: center;
+}
+.menu--nodejs {
+  background: linear-gradient(#0aa9ec 0 0) left var(--p, 50%) bottom 0/var(--d, 20px) 3px no-repeat, linear-gradient(#0aa9ec 0 0) right var(--p, 50%) bottom 0/var(--d, 20px) 3px no-repeat;
+  transition: 0.3s, background-position 0s;
+}
+.menu--nodejs:hover {
+  --d: 100%;
+  --p: 100%;
+  transition: 0.3s, background-size 0.3s 0.3s;
+  text-align: center;
+}
+.menu--devops {
+  background: linear-gradient(90deg, transparent, #0aa9ec, transparent) bottom/var(--d, 0) 3px no-repeat;
+  transition: 0.5s;
+}
+.menu--devops:hover {
+  --d: 100%;
+}
+.menu--author {
+  background: linear-gradient(#0aa9ec 0 0) var(--p, 100%) 0, linear-gradient(#0aa9ec 0 0) 0 var(--d, 0), linear-gradient(#0aa9ec 0 0) var(--d, 0) 100%, linear-gradient(#0aa9ec 0 0) 100% var(--p, 100%);
+  background-size: var(--d, 0) 3px, 3px var(--d, 0);
+  background-repeat: no-repeat;
+  transition: 0.5s, background-position 0s 0.5s;
+}
+.menu--author:hover {
+  --d: 100%;
+  --p: 0% ;
 }
 
 /*# sourceMappingURL=style.css.map */

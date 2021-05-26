@@ -86,7 +86,11 @@ header{
     font-weight: 600;
   }
   a {
-    color: rgba(0, 0, 0, 0.7);
+    color: $nav-color;
+    padding: 5px 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
   }
   a:hover{
     color: black;
@@ -202,5 +206,69 @@ header{
   &__title h4{
     font-size: $font-sm;
     font-weight: normal;
+  }
+}
+
+.menu {
+  &--home{
+    background:
+      linear-gradient(45deg, $nav-origin-color 50%, transparent 0) right /250% 100% no-repeat,
+      linear-gradient(45deg, transparent 50%, $nav-origin-color 0) left /250% 100% no-repeat;
+    transition: 0.5s;
+  }
+  &--home:hover{
+    background-position: center;
+    color: #fff !important;
+    text-align: center;
+  }
+
+  &--php{
+    background:
+      repeating-linear-gradient($nav-origin-color 0 8px, transparent 0 16px) left /var(--d, 0) 100% no-repeat,
+      repeating-linear-gradient(transparent 0 8px, $nav-origin-color 0 16px) right/var(--d, 0) 100% no-repeat;
+    transition: 0.5s;
+  }
+  &--php:hover{
+    --d: 100%;
+    color: #fff !important;
+    text-align: center;
+  }
+
+  &--nodejs {
+    background: 
+      linear-gradient($nav-origin-color 0 0) left  var(--p, 50%) bottom 0 /var(--d, 20px) 3px no-repeat,
+      linear-gradient($nav-origin-color 0 0) right var(--p, 50%) bottom 0 /var(--d, 20px) 3px no-repeat;
+    transition: 0.3s, background-position 0s;
+  }
+  &--nodejs:hover {
+    --d: 100%;
+    --p: 100%;
+    transition: 0.3s, background-size 0.3s 0.3s;
+    text-align: center;
+  }
+
+  &--devops{
+    background: 
+      linear-gradient(90deg, transparent, $nav-origin-color, transparent) 
+      bottom /var(--d, 0) 3px no-repeat;
+    transition: 0.5s;
+  }
+  &--devops:hover{
+    --d: 100%;
+  }
+
+  &--author{
+    background:
+      linear-gradient($nav-origin-color 0 0) var(--p, 100%) 0,
+      linear-gradient($nav-origin-color 0 0) 0 var(--d, 0),
+      linear-gradient($nav-origin-color 0 0) var(--d, 0) 100%,
+      linear-gradient($nav-origin-color 0 0) 100% var(--p, 100%);
+    background-size: var(--d, 0) 3px, 3px var(--d, 0);
+    background-repeat: no-repeat;
+    transition: 0.5s, background-position 0s 0.5s;
+  }
+  &--author:hover{
+    --d: 100%;
+    --p: 0%
   }
 }
