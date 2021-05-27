@@ -16,6 +16,9 @@ body{
   line-height: 1.8  ;
   font-weight: 400;
   overflow-x: hidden;
+  &.noscroll {
+    overflow: hidden;
+  }
 }
 
 h1, h2, h3, h4, h5{

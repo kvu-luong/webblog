@@ -3,9 +3,10 @@
     display: none;
   }
 }
+
 .nav{
   position: fixed;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 50px);
   width: 25%;
   display: flex;
   flex-direction: column;
@@ -84,6 +85,22 @@
     font-family: "Lora", Arial, serif;
     font-size: $font-md;
     font-weight: 600;
+  }
+
+  &.mobile{
+    display: none;
+  }
+  &.active{
+    @include breakpoint-down(medium){
+      width: 100%;
+    }
+    display: block;
+    position: fixed;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: -50%;
   }
 }
 
