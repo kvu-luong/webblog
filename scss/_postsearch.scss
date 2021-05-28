@@ -1,0 +1,26 @@
+.search-post{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include breakpoint-down(small){
+    grid-template-columns: 1fr;
+  }
+  .post--search{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post__image{
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .post__title a{
+    font-size: $font-md;
+    line-height: 1;
+  }
+
+  .post__subtitle span{
+    font-size: 0.75rem;
+    padding-left: 2px;
+  }
+}
