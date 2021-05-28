@@ -1,4 +1,5 @@
 .post--single{
+  display: flex;
   flex-direction: column;
 
   .post__image{
@@ -14,6 +15,9 @@
   .post__subtitle{
     display: flex;
     justify-content: center;
+    @include breakpoint-down(medium){
+      margin-bottom: 10px;
+    }
   }
 
   .post__headline{
